@@ -1,0 +1,32 @@
+<!DOCtype html>
+<html>
+	<head>
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+   		<style type="text/css">
+			#home{height:0;}
+			#Profile{min-height: 0; height: 0; overflow: hidden;}
+		</style>
+		<title><?php echo $__env->yieldContent('page_title'); ?></title>
+		<script src="<?php echo e(url()); ?>/public/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo e(url()); ?>/public/css/preloader.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo e(url()); ?>/public/css/styleloyalty.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="<?php echo e(url()); ?>/public/css/bootstrap.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="<?php echo e(url()); ?>/public/css/bootstrap-theme.min.css">
+		<link href="<?php echo e(url()); ?>/public/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<!-- bxSlider CSS file -->
+		<link href="<?php echo e(url()); ?>/resources/assets/mcslider/jquery.bxslider.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="<?php echo e(url()); ?>/public/css/profile.css">
+		<style type="text/css">.cyd-update-points{display: none;}</style>
+	</head>
+	<body>
+		<!--preloader-->
+		<div class="cyd_loading">Loading...</div>
+		<?php echo $__env->yieldContent('content'); ?>
+		<div class="row black_divider"></div>
+		<h1 id="fb-welcome"></h1>
+		<div id="fb-root"></div>
+		<script src="<?php echo e(url()); ?>/public/js/all.js"></script>
+	</body>
+</html>

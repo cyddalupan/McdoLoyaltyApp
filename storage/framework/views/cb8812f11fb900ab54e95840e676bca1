@@ -1,0 +1,93 @@
+<?php $__env->startSection('title'); ?>
+   User Post
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;User Post
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="row BranchMembers" style="color:black">
+	<h1>
+		<?php echo e($user->name); ?>
+
+	</h1>
+
+	<h2>good post</h2>
+	<table style="margin:30px;">
+		<tr>
+			<td>
+				good post
+			</td>
+			<td>
+				Likes
+			</td>
+			<td>
+				Comment
+			</td>
+			<td>
+				Keyword
+			</td>
+		</tr>
+		<?php foreach($good_posts as $good_post): ?>
+		<tr>
+			<td>
+				<?php echo e($good_post->message); ?>
+
+			</td>
+			<td>
+				<?php echo e($good_post->likes); ?>
+
+			</td>
+			<td>
+				<?php echo e($good_post->comment_count); ?>
+
+			</td>
+			<td>
+				<?php echo e($good_post->keyword); ?>
+
+			</td>
+		</tr>
+		<?php endforeach; ?>
+	</table>
+
+	<h2>bad post</h2>
+	<table style="margin:30px;">
+		<tr>
+			<td>
+				good post
+			</td>
+			<td>
+				Likes
+			</td>
+			<td>
+				Comment
+			</td>
+			<td>
+				Keyword
+			</td>
+		</tr>
+		<?php foreach($bad_posts as $bad_post): ?>
+		<tr>
+			<td>
+				<?php echo e($bad_post->message); ?>
+
+			</td>
+			<td>
+				<?php echo e($bad_post->likes); ?>
+
+			</td>
+			<td>
+				<?php echo e($bad_post->comment_count); ?>
+
+			</td>
+			<td>
+				<?php echo e($bad_post->keyword); ?>
+
+			</td>
+		</tr>
+		<?php endforeach; ?>
+	</table>
+<div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

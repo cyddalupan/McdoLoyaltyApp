@@ -1,0 +1,78 @@
+<?php $__env->startSection('title'); ?>
+   Suggestions
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Feedback
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('submenu'); ?>
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a href="#">Feeds</a></li>
+		<li role="presentation"><a href="<?php echo e(url()); ?>/suggestion/trash">Trash</a></li>
+	</ul>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<style type="text/css">
+		a{color:rgb(51, 122, 183);}
+		.suggestion_day{ cursor: pointer;}
+		.suggestion_list{ width: 100% !important; display: none;}
+	</style>
+	
+	<div class="col-xs-9 feedbacktab_desc">View feedback from registered employees.</div>
+	<div class="clear"></div>
+	<div class="col-md-10"><hr/></div>
+	<div class="clear"></div>
+	<div id="Feedback_Table">
+		
+		<div class="col-md-8 feedback_collection"><b>FEEDS PER DAY</b> </div>
+	  	<div class="clear"></div>
+	  	<?php $suggestion_day = 0; ?>
+		<?php foreach($suggestions as $suggestion): ?>
+		<?php $suggestion_day++; ?>
+		<div class="col-md-8 date_feedback">
+			
+			<div class="col-md-10 date_feedback suggestion_day suggestion_day<?php echo e($suggestion_day); ?>"><p>
+				
+				<span class="glyphicon glyphicon-chevron-down feedback_dwnbt " aria-hidden="true"></span><?php echo e($suggestion['day']); ?></p></div>
+			<div class="col-md-2 date_feedback_remove">
+				<a href="<?php echo e($suggestion['delete_whole_day_link']); ?>">&nbsp;&nbsp;&nbsp;Delete
+					<span class="glyphicon glyphicon-minus-sign remove" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="col-md-12 backgroundfeed_percollection suggestion_list suggestion_list<?php echo e($suggestion_day); ?>">
+				<?php foreach($suggestion['values'] as $value): ?>	
+				<div class="col-md-6 backgroundfeed_percollection">
+					<div class="col-md-11 suggestion_feed one-edge-shadow">	
+						<div class="col-md-12 feedback_codename"><p><?php echo e($value['code_name']); ?></p><hr></div>
+						<div class="col-md-12 feedback_comment"><p><?php echo e($value['description']); ?></p></div>		
+						<br>
+						<div class="col-md-12 feedback_delete">
+							<a href="<?php echo e($value['delete_link']); ?>"> 
+							<span class="glyphicon glyphicon-minus-sign remove" aria-hidden="true"></span></a>
+						</div>
+					</div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+			<hr/>
+		</div>
+		<div class="clear"></div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$( '.suggestion_day<?php echo e($suggestion_day); ?>' ).click(function() {
+				  $( ".suggestion_list<?php echo e($suggestion_day); ?>" ).toggle( "slow");
+				});
+			});
+		</script>
+        <?php endforeach; ?>
+	</div>
+	
+	<div class="clear"></div>
+	<br>
+	<br>
+	<br>
+	<br><br><br>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

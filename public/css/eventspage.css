@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face { font-family: Aracne Condensed ; src: url('{{url()}}/../fonts/ARACNE-CONDENSED_regular.ttf'); } 
+@font-face { font-family: Flexo ; src: url('../fonts/Flexo-Regular.woff'); }
+#col-header {
+	background-color: #282828;	
+	height: 100px;
+	font-family: Aracne Condensed;
+	color: #ffcc00;
+	font-size: 36px;
+
+}
+
+.events_comments{
+	clear: both;
+	text-align: center;
+	margin: auto;
+}
+.logo_event{
+	margin-left: 132px;
+	padding-top:17px;	
+	font-size: 22px;
+	font-family: Flexo;
+	color: #abaaaa;
+	
+}
+
+.header_div{
+	padding-top: 24px;
+	border-bottom: 3px solid #aeadad;
+	
+}
+#col-header img {
+	max-width: 150px;
+	margin-top: 24px;
+	margin-left: 20px;
+}
+
+#col-header p {
+	margin-top: -118px;
+    margin-left: 185px;
+
+}
+
+#col-header {
+	/*background-color: #282828;*/	
+	height: 100px;
+	font-family: Century Gothic;
+	color: #ffcc00;
+	font-size: 25px;
+}
+
+#after-header{
+	padding-top: 60px;
+    padding-left: 60px;
+}
+.Eventhead{
+	color: #3c3c3c;
+	margin-left: 220px;
+	font-size: 40px;
+	font-family: Bebas
+}
+#after-header h2{
+	font-weight: bold;
+	
+}
+
+#after-header hr{
+	margin-top: -24px;
+	margin-left: 110px;
+	border: 0;
+	border-top: 4px solid #333333;
+	width: 960px;
+}
+#content1 h3{
+	font-family: Flexo;
+}
+
+.container{
+	
+}
+
+#content1{
+	margin-left: 80px;	
+	padding-left: 35px;
+}
+
+#content1 h3{
+	font-size: 30px;
+}
+
+.date {
+	font-weight: bold;	
+	color: #929191;
+}
+
+.content1 img{
+	max-width: 410px;	
+}
+
+.text1{
+	font-size:18px;	
+}
+
+#content2{
+	padding-left: 90px;	
+}
+
+#content2 h3{
+	font-size: 30px;
+	font-weight: bold;	
+}
+
+#content2 img{
+	max-width: 300px;
+	margin-top: -19px;
+}
+#content2 a{
+	color: #3c3c3c;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+ul li:before {
+	content: "\00BB \0020";
+}

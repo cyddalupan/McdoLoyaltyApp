@@ -1,0 +1,48 @@
+<?php $__env->startSection('page_title'); ?>
+  Pending
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="<?php echo e(url()); ?>/public/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="<?php echo e(url()); ?>/public/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo e(url()); ?>/public/css/Pending.css">
+
+<div id="Pending">
+    <div class="col-xs-12 image_loyalty">
+        <img src="<?php echo e(url()); ?>/public/IMG/Alpha_logo.png" height="140px" width="140px">
+    </div>
+    <div class="col-xs-12 header_title">
+        <div class="row Loyaltytitle_pending">Loyalty App</div>
+        <div class="row managerspage">Manager's&nbsp;Board</div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-1">
+        </div>
+        
+        <div class="col-lg-4 col-md-12">
+            <?php echo $__env->make('pendingRequest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+
+        <div class="col-lg-2">
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+
+            <?php echo $__env->make('pendingBranchEvent', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+</div>
+
+
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

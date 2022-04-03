@@ -1,0 +1,31 @@
+<?php $__env->startSection('title'); ?>
+   Loyalty APP
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;&nbsp;Change Image
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo e(url()); ?>/public/css/app.css">
+	<div id="changeimage">
+		<?php foreach($errors->all() as $error): ?>
+            <p style="color:red;">*<?php echo e(isset($error) ? $error : ''); ?></p>
+        <?php endforeach; ?>
+		<img src="<?php echo e(url()); ?>/public/event_img/<?php echo e($event->img); ?>">
+
+		<form action="<?php echo e(url()); ?>/events/change_image_submit" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="eventid" value="<?php echo e($event->id); ?>">
+			<input type="hidden" name="linkback" value="<?php echo e(url()); ?>/manager-admin/<?php echo e($managerid); ?>">
+			<div class="info">
+				Select New Image to upload:
+			</div>
+			<div class="select_img">
+	            <input type="file" name="photo" id="post_image_upload" value="">
+	            <p class="help-block note_event">Select File to upload. Photo must be 622px by 314px</p>
+			</div>
+			<input class="btn btn-default" type="submit" value="Submit">
+		</form>
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

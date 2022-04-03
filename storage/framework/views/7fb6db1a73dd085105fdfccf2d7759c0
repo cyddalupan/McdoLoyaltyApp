@@ -1,0 +1,60 @@
+<?php $__env->startSection('title'); ?>
+   Bad Words
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('submenu'); ?>
+	 <ul class="nav nav-pills">
+        <li role="presentation"><a href="<?php echo e(url()); ?>/editor" class="badwords_got_link">Settings</a></li>
+        <li role="presentation" class="active"><a href="#">Restrictions</a></li>
+    </ul>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;App Settings
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<div class="col-md-10 subtitle_desc"><p>Restrict bad words/foul language</p></div>
+<div class="clear"></div>
+<div class="col-md-10"><hr/></div>
+<div class="clear"></div>
+
+
+	<div style="color:red;">
+		<?php foreach($errors->all() as $error): ?>
+		    <p>Error <?php echo e(isset($error) ? $error : ''); ?></p>
+		<?php endforeach; ?>
+	</div>
+	<div class="row" style="color:black;">
+	
+	<div class="col-md-10 input_words">
+		<form action="<?php echo e(url()); ?>/editor/save_badword" method="post">
+			keyword: <input type="text" name="badword" />
+			<input type="submit" value="submit">
+		</form>
+	</div>
+	<div class="clear"></div>
+	<div class="col-md-5 filterwords_table">
+			 <table class="table">
+	            <tr> 
+	              <th colspan="2" class="row filter_subtitle">Filtered Words</th>
+	              
+	            </tr>
+	          	<?php foreach($badwords as $badword): ?>
+            	<tr>
+					
+					<td class="row filter_words"><p><?php echo e($badword->bad_word); ?></p></td>                       
+					<td class="row filter_words"><a href="<?php echo e($badword->delete_link); ?>"class="delete_word">
+					<span class="glyphicon glyphicon-minus-sign remove" aria-hidden="true">	</span>&nbsp;&nbsp;delete</a></td>
+            	</tr>
+				<?php endforeach; ?>
+             </table>
+		</div>
+
+	
+	
+
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

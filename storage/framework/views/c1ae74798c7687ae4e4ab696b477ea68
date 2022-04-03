@@ -1,0 +1,68 @@
+<?php $__env->startSection('title'); ?>
+   Branch Members
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Branch Members
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+
+<div class="row BranchMembers">
+
+	
+	
+	
+	<div class="col-md-9 Branch_name"> 
+	<p><?php echo e($branch->branch_name); ?></p>
+	
+	</div>
+	<div class="col-md-9 Branch_city"> 
+	<p><?php echo e($branch->city); ?></p>
+	
+	</div>
+	<div class="col-md-9 Branch_managersname"> 
+		<p><b>General Manager: </b><?php echo e($manager->name); ?><p>
+		
+	</div>
+	
+	<div class="clear"></div>
+	<div class="col-md-9 hr_branch">
+	<hr>
+	</div>
+	<div class="clear"></div>
+	
+	
+	<div class="col-md-7 Branch_memberslist">
+			 <table class="table">
+	            <tr> 
+	              <th  class="row branch_field">Branch Members</th>
+	              <th  class="row branch_field">Points</th>
+	            </tr>
+	            <?php foreach($members as $member): ?>
+            	<tr>
+					<td class="row branch_listrecord">
+						<a href="https://www.facebook.com/<?php echo e($member->facebook_id); ?>"target="_blank" class="branch_ahref"><?php echo e($member->name); ?></a>
+						 [<a href="<?php echo e($member->link_to_user_post); ?>" class="branch_ahref" />View Posts</a>]
+					</td>
+					
+					<td class="row branch_listrecord">
+						<span class="row badge"> 
+							<?php echo e($member->points); ?>
+
+						</span>	
+						
+					</td>
+            	</tr>
+		<?php endforeach; ?>
+             </table>
+		</div>
+
+
+
+
+
+<div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

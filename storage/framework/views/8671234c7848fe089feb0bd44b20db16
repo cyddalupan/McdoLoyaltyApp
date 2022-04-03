@@ -1,0 +1,155 @@
+<?php $__env->startSection('page_title'); ?>
+   Loyalty APP User
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<div id="Profile">
+	<div class="col-md-12 header_user whats_new"><img src="<?php echo e(url()); ?>/public/IMG/sapphire_round.png" height="30px" width="30px" class="row bluepantone">&nbsp;&nbsp;&nbsp;ALPHA 245</div>
+	<div class="clear"></div>
+	<div class="row user_sidebar">
+			<div class="col-md-3 profile_col">
+
+
+				<div class="col-md-12 profile_title">Profile</div>
+					<!--<div class="col-md-12 mcphoto">
+						<div class="col-md-12 mcphotoplate"><img src="https://graph.facebook.com/<?php echo e($userInfo->facebook_id); ?>/picture?type=large" class="pic" height="150px" width="150px"/></div>
+					</div>-->
+				<div class="col-md-12 name"><b><?php echo e($userInfo->name); ?></b></div>
+				<div class="col-md-12 location_age"><?php echo e(isset($UserBranch->branch_name) ? $UserBranch->branch_name : 'Please Select branch'); ?>
+
+													<br><?php echo e($userInfo->gender); ?>, <?php echo e($age); ?></div>
+				<div class="clear"></div>
+				<div class="row borderbottom"></div>
+				
+				<div class="col-md-12 workinfo_label"><b>Work Info</b></div>
+				<div class="col-md-12 branch_details">Company Branch, City<br>Employee's No.</div>
+				<div class="row borderbottom"></div>
+
+				<div class="clear"></div>
+
+				<div class="col-md-12 settings"><b>Settings</b></div>
+						<div class="col-md-12 onoff">
+				     		<p>
+				     			<br>
+				     			
+				     				Post to Wall&nbsp;&nbsp;&nbsp;&nbsp;
+
+									<?php if($userInfo->post_to_my_wall == "yes"): ?>
+										<input type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="success" class="toggle_onoff">
+									<?php else: ?>
+										<input type="checkbox" data-toggle="toggle" data-size="mini" data-onstyle="success" class="toggle_onoff">
+									<?php endif; ?>
+           					</p>
+						</div>
+
+
+				<div class="clear"></div>
+				<div class="row borderbottom"></div>
+
+				<div class="col-md-12 pagerole"><b>Page Role</b></div>
+					<div class="row backtoAdmin">
+						<?php if($userInfo->user_type == 'admin'): ?>
+						<a href="<?php echo e(url()); ?>/dashboard" target="_blank">
+							<div class="col-md-12 admin_button">Admin Page</div>
+						</a>
+						<?php elseif($userInfo->user_type == 'branchManager'): ?>
+						<a href="<?php echo e(url()); ?>/manager-admin/<?php echo e($userInfo->facebook_id); ?>" target="_blank">
+							<div class="col-md-12 pending_button">Pending Requests&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"><?php echo e($pending_count); ?></span></div>
+						</a>
+						<?php else: ?>
+								<div style="height:95px;"></div>
+						<?php endif; ?>
+					</div>
+				<br>
+				<br>		
+				<div class="col-md-12 recordpoints">
+						<div class="row num_rec num_point"><img src="<?php echo e(url()); ?>/public/IMG/loading.gif" width="25px" height="25px" ></div>
+							<br><p class="row post">Earned Points</p>
+				</div>
+					
+					<div class="col-md-12 update update_button">
+						<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary cyd-update-points" autocomplete="off"
+							data-size="mini">
+								  Update Points 
+						</button>
+
+						<script>
+					        $('#myButton').on('click', function () {
+								var $btn = $(this).button('loading')
+								// business logic...
+								$btn.button('reset')
+								})
+						</script>
+					</div>
+				
+			</div>
+	
+			
+
+			<?php if($userInfo->user_type == 'xuser' || $userInfo->user_type == 'xxuser'): ?>
+			   <?php echo $__env->make('home_select_branch', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php else: ?>
+				<?php echo $__env->make('home_slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php endif; ?>
+
+			<div class="row col-md-9 newsfeed_header">Recent Updates</div>
+
+			<div class="row col-md-9 newsfeed shadow">
+
+				<?php foreach($onGoingEvents as $onGoingEvent): ?>
+				<div class="clear"></div>
+				<div class="col-md-12 feed_placement">
+					<div class="row per_event">
+						<div class="col-md-3 logo_title">
+							<img src="<?php echo e(url()); ?>/public/IMG/Alpha logo sample 100px.png" class="img-responsive logoclass" 
+						 	alt="Responsive image" width="65px" height="65px"/>
+						</div>
+						<div class="col-md-6 copytitle"><?php echo e($onGoingEvent->title); ?></div>
+						<div class="clear"></div>
+						<div class="col-md-8 image_placement">
+							<img src="<?php echo e(url()); ?>/public/event_img/<?php echo e($onGoingEvent->img); ?>" width="450px" height="240px">
+						</div>
+						<div class="col-md-8 copy_ad">
+								<p><?php echo $onGoingEvent->description; ?>.</p>
+						</div>
+						<div class="col-md-2 fbshare">
+							<div class="fb-share-button" data-href="<?php echo e(url()); ?>/page_event/<?php echo e($onGoingEvent->id); ?>" data-layout="button" class="img-responsive share"></div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+			    </div>
+				<?php endforeach; ?>
+
+			</div>
+	</div>	
+</div>
+
+<script src="<?php echo e(url()); ?>/resources/assets/slippery/dist/slippry.min.js"></script>
+<link rel="stylesheet" href="<?php echo e(url()); ?>/resources/assets/slippery/dist/slippry.css" />
+
+<!-- bxSlider Javascript file -->
+<script src="<?php echo e(url()); ?>/resources/assets/mcslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  		$('.bxslider').bxSlider();
+	});
+</script>
+
+<!--facebook JS-->
+<script type="text/javascript">
+	//declare app_id
+	var cyd_app_id = <?php echo e($app_id); ?>;
+	var public_url = "<?php echo e(url()); ?>/";
+	var me_fb_id = <?php echo e($userInfo->facebook_id); ?>;
+	var userPoints = <?php echo e($userInfo->points); ?>;
+	var userRewards = <?php echo e($userInfo->rewards); ?>;
+	var userTotalPost = <?php echo e($post_count); ?>;
+	var switch_point = <?php echo e($switch_point); ?>;
+</script>
+
+<!--post to wall slider data sender-->
+<script src="<?php echo e(url()); ?>/public/js/slider_data_sender.js"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,65 @@
+
+<div class="row header_request"><b>Pending    Requests</b></div>
+<div class="row pending_subdesc"><b>employees of McDonald's Corporation are entitled to join the App</b></div>
+<div class="row back_prflebutton" style="padding-bottom: 54px;"></div>
+<?php foreach($pendingUsers as $pendingUser): ?>
+<div class="row request_placement">
+    <div class="col-xs-2 image_req">
+        <img src="https://graph.facebook.com/<?php echo e($pendingUser->facebook_id); ?>/picture?type=large" width="100px" height="100px">
+    </div>
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-7 pending_name">
+        <p>
+            <strong>
+                <a href="https://facebook.com/<?php echo e($pendingUser->facebook_id); ?>" class="pending_name">
+                    <?php echo e($pendingUser->name); ?>
+
+                </a>
+            </strong>
+            <br>
+            employee of the company?
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 option_request">
+            <a class="btn btn-success" href="yes-accept-user/<?php echo e($pendingUser->facebook_id); ?>/<?php echo e($manager_id); ?>">Confirm</a>
+            <a class="btn btn-danger" href="not-on-my-branch/<?php echo e($pendingUser->facebook_id); ?>/<?php echo e($manager_id); ?>" onclick="return confirm('Are you sure you want to Decline <?php echo e($pendingUser->name); ?>?');">Decline</a>
+        </div>
+    </div>
+</div>
+<br>
+<?php endforeach; ?>
+<div class="clear"></div>
+<br/>
+<div class="row header_request"><b>Your Members</b></div>
+
+<?php foreach($approvedUsers as $approvedUser): ?>
+    <div class="row request_placement">
+        <div class="col-xs-2 image_req">
+            <img src="https://graph.facebook.com/<?php echo e($approvedUser->facebook_id); ?>/picture?type=large" width="100px" height="100px">
+        </div>
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-5 pending_name">
+            <p>
+                <strong>
+                    <a href="https://facebook.com/<?php echo e($approvedUser->facebook_id); ?>" class="pending_name">
+                        <?php echo e($approvedUser->name); ?>
+
+                    </a>
+                </strong>
+                <br>
+                employee of the company?
+            </p>
+        </div>
+        <div class="col-xs-1 option_request">
+            <button type="button" class="btn btn-warning">
+                <a href="not-on-my-branch/<?php echo e($approvedUser->facebook_id); ?>/<?php echo e($manager_id); ?>" onclick="return confirm('Are you sure you want to Remove <?php echo e($approvedUser->name); ?>?');">
+                    Remove
+                </a>
+            </button>
+        </div>
+    </div>
+    <br>
+<?php endforeach; ?>

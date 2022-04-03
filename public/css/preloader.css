@@ -1,0 +1,57 @@
+@font-face { font-family: Aracne Condensed; src: url('../fonts/ARACNE-CONDENSED_regular.ttf'); } 
+
+.cyd_loading{
+  font-family: Trebuchet MS;
+  text-align: center;
+  font-size: 37px;
+  height: 187px;
+  padding-top: 80px;
+ /* color: #453E49;*/
+ color:#fff;
+  position: relative;
+  z-index: 15;
+	background: black;
+	height: 1000px;
+
+}
+.cyd_loading a{
+	color:#ffcc00;
+	vertical-align: bottom;
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+}
+
+.cyd_loading a:hover{
+	color:#ffcc00;
+	text-decoration: none;
+}
+
+.cyd_lo1{
+	left: 0;
+	right:127px;
+}
+.cyd_lo2{
+	left: 0;
+	right: 87px;
+}
+.cyd_lo3{
+	left: 0;
+	right: 44px;
+}
+.cyd_lo4{
+	left: 0;
+	right: 0;
+}
+.cyd_lo5{
+	left: 33px;
+	right: 0;
+}
+.cyd_lo6{
+	left: 75px;
+	right: 0;
+}
+.cyd_lo7{
+	left: 153px;
+	right: 0;
+}

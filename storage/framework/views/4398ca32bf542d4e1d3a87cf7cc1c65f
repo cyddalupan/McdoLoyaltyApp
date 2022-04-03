@@ -1,0 +1,127 @@
+<?php $__env->startSection('title'); ?>
+   Loyalty APP
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+<span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>&nbsp;&nbsp;Create New Event
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?> 
+<br>
+<!-- wysihtml5 parser rules -->
+<div class="row branch_subdesc">
+    Input upcoming event details
+</div>
+<div class="col-md-10"><hr/></div>
+<div class="clear"></div>
+
+<form action="<?php echo e(url()); ?>/new-event/insert" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="event_id" value="<?php echo e(isset($event->id) ? $event->id : ''); ?>">
+    <div class="clear"></div>
+     <div class="form-group">
+        <label for="input" class="col-sm-2 title_editor"></label>
+        <div class="col-sm-6">
+            <?php foreach($errors->all() as $error): ?>
+                <p style="color:red;">*<?php echo e(isset($error) ? $error : ''); ?></p>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="clear"></div>
+ 	<div class="form-group">
+        <label for="input" class="col-sm-2 title_editor">Event title</label>
+        <div class="col-sm-6">
+        	<input type="text" class="form-control" name="title"  placeholder="Title"  value="<?php echo e(isset($old['title']) ? $old['title'] : ''); ?><?php echo e(isset($event->title) ? $event->title : ''); ?>">
+        </div>
+    </div>
+    <br>
+    <br>
+  	<div class="form-group">
+        <label for="input" class="col-sm-2 title_editor ">Description</label>
+        <div class="col-sm-6">
+        <div style="background:#fff; color:black;">
+            <textarea class="form-control" name="description" rows="8" placeholder="textarea"><?php echo e(isset($old['description']) ? $old['description'] : ''); ?><?php echo e(isset($event->description) ? $event->description : ''); ?></textarea>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <br>
+    
+   
+    <div class="clear"></div>
+        <label for="input" class="col-sm-2 title_editor">Publish Date</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control span2 datepicker" style="color:black;" name="publishdate" value="<?php echo e(isset($old['publishdate']) ? $old['publishdate'] : ''); ?><?php echo e(isset($event->event_date) ? $event->event_date : ''); ?>" id="dpd1">
+        </div>
+    <div class="clear"></div>
+    <br>
+    <div class="clear"></div>
+    <div class="form-group">
+        <label for="input" class="col-sm-2 title_editor ">Image</label>
+        <div class="col-sm-6">
+         <div class="col-sm-8 Image_upload_upcoming">
+
+            <?php if(isset($event->img)): ?>
+                <script language="JavaScript">
+                <!--
+                function autoResize(id){
+                    var newheight;
+                    var newwidth;
+
+                    if(document.getElementById){
+                        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+                        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+                    }
+
+                    document.getElementById(id).height= (newheight) + "px";
+                    document.getElementById(id).width= (newwidth) + "px";
+                }
+                //-->
+                </script>
+                <iframe src="<?php echo e(url()); ?>/events/change_image/<?php echo e($event->id); ?>"  width="100%" height="200px" id="change_image" marginheight="0" frameborder="0" onLoad="autoResize('change_image');"></iframe>
+            <?php else: ?>
+                Select image to upload:
+                <input type="file" name="photo" id="post_image_upload" value="<?php echo e(isset($old['photo']) ? $old['photo'] : ''); ?>">
+                <p class="help-block note_event">Select File to upload. Photo must be <b>622px</b> by <b>314px</b></p>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="col-md-6 select_branch_post">Include any branch in posting:</div>
+    <div class="clear"></div>
+    <?php echo $__env->make('select_branch', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <div class="form-group">
+        <div class="form-group">
+            <label for="input" class="col-sm-2 title_editor"></label>
+            <div class="col-md-9">
+            <hr/>
+            <input type="submit" class="btn btn-primary" value="Submit Event"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="clear"></div>
+
+<!--date picker-->
+<script src="<?php echo e(url()); ?>/resources/assets/datepicker2/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<link rel="stylesheet/less" type="text/css" href="<?php echo e(url()); ?>/resources/assets/datepicker2/css/datepicker.css" />
+<script type="text/javascript">
+$('.datepicker').datepicker();
+var nowTemp = new Date();
+var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+ 
+
+$('#dpd1').on('changeDate', function() {
+  $('.dropdown-menu').hide();
+});
+</script>
+
+
+<!--text editor-->
+<?php /*
+<script src="<?php echo e(url()); ?>/resources/assets/nice-edit/nice.js" type="text/javascript"></script>
+*/ ?>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

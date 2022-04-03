@@ -1,0 +1,22 @@
+#changeimage {
+  text-align: center;
+  color: #000;
+}
+#changeimage .info {
+  color: black;
+  margin: 18px;
+  font-family: inherit;
+  font-size: 20px;
+}
+#changeimage .select_img {
+  width: 313px;
+  color: dimgrey;
+  margin: auto;
+  text-align: center;
+}
+#changeimage .btn-default {
+  margin-bottom: 33px;
+  margin-top: 18px;
+}
+
+/*# sourceMappingURL=app.css.map */

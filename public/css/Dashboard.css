@@ -1,0 +1,1082 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+}
+
+.clear{
+	clear: both;
+}
+
+.cmd_header{
+	background: #930000;
+	border-bottom: 7px solid #590000
+}
+
+#Board{
+	color: White;
+	overflow: hidden;
+	width: 100%;
+	background-color: #26404d;
+
+}
+
+/*New Dashboard CSS-----------------------------------------------------------------*/
+.side_bar{
+	padding: 1px;
+	font-size: 14px;
+	font-family: Century Gothic;
+	padding-top: 14px;
+	
+}
+.side_menu{
+	padding: 0px;
+}
+
+
+.header_board{
+	background-color: #4c81a0;
+	padding-bottom: 40px;
+}
+.search{
+	text-align: right;
+	margin-bottom: -25px;
+	margin-left: 821px;
+	margin-top: 10px;
+}
+.title_board{
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 12px;
+}
+.title_content{
+	text-align: left;
+	font-size: 22px;
+	font-family: Trebuchet MS;
+	color: #4d5356;
+	padding-top: 11px;
+}
+.hr_div{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 6px;
+}
+hr{
+	color: #dadada;
+	background-color: #dadada;
+	height: 1px;
+}
+.half_sideboard{
+	padding: 0px;
+}
+
+/*Side Bar Contents*/
+.logo_menu{
+	text-align: center;
+	padding-left: 40px;
+}
+.menu_content{
+	font-size: 22px;
+	font-family: Trebuchet MS;
+	color: white;
+	padding: 0px;
+
+}
+.menu_box{
+
+	height: 100%;
+	font-size: 13px;
+	font-family: Trebuchet MS;
+	padding-left: 25px;
+	padding-top: 14px;
+	padding-bottom: 20px;
+	text-align: left;
+	color: white;
+}
+
+
+/* unvisited link */
+.ab:link {
+    color: white;
+}
+
+/* visited link */
+.ab:visited {
+    color: white;
+    background-color: #4c81a0;
+}
+
+/* mouse over link */
+.ab:hover {
+    color: white;
+    background-color: #4c81a0;
+}
+
+/* selected link */
+.ab:active {
+    color: white;
+    background-color: #4c81a0;
+}
+
+.logo_agdn{
+    	
+    }
+.shadow {
+   -moz-box-shadow:    inset  0  8px 8px -8px #696868, 
+                        inset  0 -8px 8px -8px #696868;
+    -webkit-box-shadow: inset  0  8px 8px -8px #696868, 
+                        inset  0 -8px 8px -8px #696868;
+     box-shadow:        inset  0  8px 8px -8px #696868, 
+                        inset  0 -8px 8px -8px #696868;
+
+
+
+    margin-left: 0px;
+    padding: 0px;
+    min-height: 800px;
+}
+
+.total{
+	background-color: #cccccc;
+	padding-left: 0px;
+	padding-right:0px;
+	padding-top:20px;
+}
+
+.footer_space{
+	padding:100px;
+}
+
+/*-----------------------------------------------------------------*/
+
+
+
+.btdash{
+	padding-bottom: 20px;
+}
+
+.D1a{
+	background-color: #930000;
+	padding-left: 25px;
+	padding-bottom: 14px;
+	padding-top: 28px;
+}
+.D1{
+
+	background-color: #930000;
+	text-align: left;
+	font-size: 20px;
+	font-famiyly: Century Gothic;
+}
+.D2{
+
+	padding: 1px;
+	height: 100%;
+	font-size: 14px;
+	font-family: Century Gothic;
+	padding-left: 4px;
+	padding-top: 14px;
+}
+.D22:hover {
+        opacity: 1;
+        filter:alpha(opacity=60);  
+        background:#6b6b6b;
+ }
+ .D22:active,
+ .D22.active,
+ .D22:focus{
+ 	background-color: #8b8b8b;
+ }
+  .ab:active,
+ .ab.active,
+ .ab:focus{
+ 	background-color: #8b8b8b;
+ }
+.D22{
+	padding: 1px;
+	height: 100%;
+	font-size: 14px;
+	font-family: Century Gothic;
+	padding-left: 30px;
+	padding-top: 14px;
+	border-bottom: 1px #5f5f5f solid;
+	padding-bottom: 19px;
+	text-align: left;
+}
+.D3{
+	background-color: #ecebeb;
+	min-height: 800px;
+
+	padding: 0px;
+}
+.bottomspace_content{
+	padding: 80px;
+
+}
+.side{
+	background-color: #3c3c3c;
+	padding-left: 10px;
+}
+
+/*Subtitles*/
+.page_sub{
+	text-align: left;
+	font-size: 20px;
+	font-family: Century Gothic;
+	color: #4d5356;
+	padding-left: 35px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.branch_subdesc{
+	text-align: left;
+	font-size: 14px;
+	color: #4d5356;
+	margin-left: 21px;
+	margin-bottom: 15px;
+	font-family: arial;
+
+}
+
+
+.box {
+	background-color: :white;
+	margin-top: 9px;
+
+
+}
+.boxa {
+	background-color: :white;
+}
+.boxb {
+	background-color: :white;
+}
+.box1{
+	background-color: #3c3c3c;
+	color: white;
+	padding-top: 23px;
+    padding-bottom: 17px;
+    margin-left: 10px;
+
+}
+.box3{
+	padding-top: 23px;
+    padding-bottom: 17px;
+    background-color: white;
+
+}
+
+.text{
+	color: #3c3c3c;
+	margin-left: 60px;
+	margin-right: 30px;
+	font-family: Century Gothic;
+	font-size: 13px;
+}
+.manageusers_desc{
+		   color: #3c3c3c;
+  padding-left: 40px;
+  text-align: left;
+   margin-top: -27px;
+  margin-bottom: -3px;
+}
+.userst{
+	font-size: 15px;
+}
+.lists{
+	color:   #3c3c3c;
+}
+.subfind{
+	text-align: left;
+}
+.userlist{
+	text-align: center;
+	margin-left: 110px;
+	margin-right: -417px;
+}
+.list-group{
+	color: black;
+	text-align: center;
+}
+
+
+.name_record{
+	color: #3c3c3c;
+}
+
+.D22.ab:active{
+
+}
+.D22.active{
+	background-color: #365688;
+}
+.noti{
+	text-align: left;
+	margin-left: 12px;
+}
+.ulist{
+	color: white;
+	font-family: Century Gothic;
+	background-color: #3c3c3c;
+}
+.subtitle1{
+
+text-align: left;
+margin-left: 23px;
+margin-top: 26px;
+font-size: 22px;
+font-family: Century Gothic;
+color: #4d5356;
+}
+.subtitle2{
+
+text-align: left;
+margin-left: 23px;
+margin-top: 26px;
+font-size: 22px;
+font-family: Century Gothic;
+color: #4d5356;
+}
+.subtitle3{
+
+text-align: left;
+margin-left: 23px;
+margin-top: 26px;
+font-size: 22px;
+font-family: Century Gothic;
+color: #4d5356;
+}
+
+.listt{
+margin-left: -88px;
+}
+.under{
+
+	text-align: left;
+margin-left: 17px;
+color: #4d5356;
+opacity: 0.5;
+}
+
+.notifbox{
+
+	margin-left: 14px;
+}
+.notifform{
+	
+}
+.txtb{
+	margin-left: 148px;
+margin-right: 675px;
+}
+
+.title_editor{
+	font-size: 14px;
+	color: #4d5356;
+	text-align: right;
+	margin-left: -36px;
+	margin-top: 8px;
+
+}
+.lab1{
+
+	color: #4d5356;
+	text-align: right;
+}
+.userupdt_button{
+	    margin-top: 23px;
+  font-size: 12px;
+  color: #8f8f8f;
+  text-align: left;
+  margin-left: 152px;
+
+}
+.userupdt_note{
+	font-size: 12px;
+	color: #8f8f8f;
+	margin-left: 166px;
+	padding: 0px;
+}
+
+.form-group{
+	text-align: left;
+}
+
+.a_left{
+	text-align: left;
+	margin-left: 116px;
+}
+
+.col-sm-8{
+	margin-bottom:15px;
+}
+.testt{
+	background-color: white;
+	margin-right: 408px;
+	margin-left: 123px;
+	color: black;
+	border: #3c3c3c 1px solid;
+}
+.desc{
+	text-align: left;
+
+}
+.imagetest{
+border: #3c3c3c 1px solid
+}
+.pager{
+	background-color:  #3c3c3c;
+	color: white;
+}
+.jumb{
+	margin-right: 459px;
+	margin-left: 16px;
+	border-radius: 15px;
+	padding-top: 2px;
+	margin-right: 531px;
+	padding-bottom: 10px
+}
+.nametitle{
+	font-family: Century Gothic;
+	color: #3c3c3c;
+	text-align: left;
+	margin-left: 35px;
+}
+.nametitle2{
+	font-family: Century Gothic;
+	color: #3c3c3c;
+	text-align: left;
+	margin-left: 35px;
+	font-size: 17px;
+}
+.butcon{
+	text-align: left;
+	margin-left: -160px;
+}
+.okgly{
+	color: green;
+}
+.update_btn{
+	text-align: left;
+	margin-left: 407px;
+
+}
+.copy_update{
+	text-align: left;
+	margin-left: 384px;
+	color: #3c3c3c;
+	font-family: Century Gothic;
+	margin-top: -28px;
+
+}
+.blast_table{
+	background-color:#3c3c3c;
+	border: #3c3c3c 1px solid;
+	color: white;
+	font-family: Century Gothic;
+	font-size: 20px;
+	margin-right: 348px;
+	margin-left: 15px;
+}
+
+.logs{
+	background-color: #cececc;
+
+}
+.name_log{
+	text-align: left;
+	margin-left: 22px;
+}
+.time_log{
+	color: #3c3c3c;
+
+	font-size: 15px;
+	border: #3c3c3c solid 1px;
+}
+.messages_log{
+	color: #3c3c3c;
+	
+	font-size: 15px;	
+	border: #3c3c3c solid 1px;
+}
+.logtime_in{
+	background-color: white;
+	text-align: left;
+}
+.logmessage_in{
+	background-color: white;
+	text-align: left;
+	overflow: hidden;
+}
+
+.logmessage_in,.logtime_in{
+	height: 22px;
+}
+.ulist_name{
+	padding: 24px;
+	background-color: #c2c2c2;
+	padding-top: 4px;
+	color: black;
+}
+.fieldname_list{
+	color: black;
+	font-family: Century Gothic;
+	list-style: none;
+}
+
+.table_list{
+	background-color: #3c3c3c;
+	color: white;
+}
+.tablee{
+	margin-right: 279px;
+	margin-left: 35px;
+	
+	padding-top: 10px;
+}
+.tablerecord{
+	background-color: white;
+	color: #3c3c3c;
+	  font-family: Trebuchet MS;
+}
+.tht{
+	margin-right: 276px;
+	margin-left: 36px;
+	text-align: center;
+}
+.user_name{
+	text-align: center;
+	background-color: #3c3c3c;
+	font-family: Trebuchet MS;
+	font-size: 15px;
+}
+.titlename{
+	padding: 0px;
+	text-align: center;
+	color: white;
+	background-color: #3c3c3c;
+	margin: 0px;
+	font-family: Trebuchet MS;
+	font-size: 20px;
+}
+
+.tablefield{
+	background-color: #3c3c3c;
+	color: white;
+}
+.tablefieldname{
+	background-color: #3c3c3c;
+}
+.thr{
+	
+}
+.remove{
+	color: #b93030;
+}
+
+.dasboard_logo{
+
+}
+
+/*Branch Tab*/
+
+.manager{
+	text-align: left;
+}
+.manager_name{
+	color: #4d5356;
+}
+.branch_field{
+	background-color: #3c3c3c;
+	color: white;
+	text-align: center;
+}
+.button_add{
+
+}
+.badge_members{
+	background-color: white;
+}
+/*Branch Members*/
+.BranchMembers{
+}
+.Branch_managersname{
+	  margin-left: 50px;
+	  text-align: left;
+	  color: #3c3c3c;
+	  font-family: Trebuchet MS;
+	  font-size: 18px;
+}
+.branch_location{
+	  
+	  text-align: left;
+	  color: #3c3c3c;
+	  font-family: Trebuchet MS;
+	  font-size: 25px;
+	  margin-bottom:5px;
+	
+}
+.Branch_name{
+	margin-left: 50px;
+	  margin-top: 30px;
+	  text-align: left;
+	  color: #3c3c3c;
+	  font-family: Trebuchet MS;
+	  font-size: 25px;
+	  
+}
+.Branch_city{
+	margin-left: 50px;
+	 
+	  text-align: left;
+	  color: #3c3c3c;
+	  font-family: Trebuchet MS;
+	  font-size: 18px;
+	  
+}
+
+.branch_label{
+  margin-right: -70px;
+  padding-top: 4px;
+  margin-left: -34px;
+  color: #3c3c3c;
+
+}
+
+.hr_branch{
+	margin-left:50px;
+}
+.Branch_memberslist{
+	margin-left:50px;
+	  margin-top: 20px;
+
+}
+.branch_listrecord{
+	color:#3c3c3c;
+	background-color:white;
+}
+a.branch_ahref{
+	color:#3c3c3c;
+}
+
+/*POST TAB*/
+.form_post{
+	margin-left: 25px;
+}
+.userpost_button{
+	  margin-top: 1px;
+  font-size: 12px;
+  color: #8f8f8f;
+  text-align: left;
+  margin-left: 14px;
+}
+}
+.postbtn_desc{
+	font-size: 12px;
+	color:#8f8f8f;
+	margin-left: 36px;
+	margin-top: 7px
+}
+
+/*Events TAB*/
+.evets_table{
+	margin-top: -25px;
+}
+.event_list{
+	border-bottom: 1px solid white;
+	margin: 0px;
+	min-width: 756px;
+}
+.date_label{
+	color: #3c3c3c;
+
+}
+.panel_monthevent{
+	color: white;
+	background-color: #850504;
+
+}
+.panel_dateevent{
+	color: #3c3c3c;
+	padding: 0px;
+}
+.event_field{
+	background-color: #3c3c3c;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.event_body{
+	padding-top: 15px;
+	border-left: 1px solid white;
+	min-height: 163px;
+}
+.date_temp{
+	min-width: 157px;
+}
+.date_placement{
+	padding-left: 39px;
+	padding-right: 41px;
+	padding-top: 12px;
+	text-align: center;
+}
+.event_title{
+	font-size: 30px;
+	text-align: left;
+	color: #3c3c3c;
+}
+.event_desc{
+	text-align: left;
+	color: #3c3c3c;
+	word-wrap: break-word;
+}
+.create_event{
+	text-align: right;
+	color: #3c3c3c;
+}
+a.event_createnew{
+	color: #1d8ccc;
+}
+/*NewEvent*/
+.Image_upload_upcoming{
+	margin-left: -13px;
+	margin-top: 12px;
+	color: #737373;
+	font-size:12px;
+}
+.note_event{
+	font-size: 12px;
+}
+
+.event_delete{
+	float:right; margin-left:20px;
+}
+
+/*Add Points Tab*/
+.addpoints_input{
+	color: black;
+	margin-top: 60px;
+	margin-left: 15px;
+	margin-bottom: 35px;
+}
+.Submit_editpoints{
+	text-align: left;
+	padding-bottom: 30px;
+}
+.div_addpoints{
+	border-bottom: 2px solid #a1aaaa;
+}
+.logaddpoints_table{
+	padding: 0px;
+	margin-top: 30px;
+}
+.erroraddpoints_log{
+	margin-top: 5px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.Log_subtitle{
+	font-size: 20px;
+	font-family: Trebuchet MS;
+	color: #3c3c3c;
+	text-align: left;
+	padding-top: 10px;
+}
+/*Add Points Tab*/
+.addbranch_table{
+	padding: 0px;
+	margin-top: 30px;
+	margin-left: 166px;
+}
+.select_branch_post{
+	color: #3c3c3c;
+margin-left: 150px;
+margin-top: 15px;
+}
+/*App Settings*/
+#App_settings{
+
+}
+.appsettings_form{
+	  margin-left: 39px;
+}
+
+.badwords_goto{
+	text-align:left;
+	font-family:Trebuchet MS;
+	font-size:14px;
+	color:#3c3c3c;
+}
+a.badwords_got_link{
+	color:#1d8ccc;
+}
+.badworda_desc_copy{
+	text-align:left;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	color:#3c3c3c;
+}
+
+.subtitle_desc{
+	text-align: left;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  color: #3c3c3c;
+  margin-top:25px;
+   padding-bottom: 6px;
+
+}
+/*Feedback tab*/
+.feedbacktab_desc{
+	   color: #3c3c3c;
+  padding-left: 40px;
+  text-align: left;
+  margin-top: 44px;
+  margin-bottom: -3px;
+}
+.feedback_dwnbt{
+	color: white;
+  padding-right: 201px;
+  padding-left: 41px;
+	   
+}
+.suggestion_feed{
+	background-color: white;
+	  padding-top: 12px;
+	  padding-bottom: 15px;
+	  margin: 10px;
+	  font-family: Trebuchet MS;
+}
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+
+	margin: 14px;
+	  background-color: white;
+	  padding: 15px;
+}
+.hr.feedback_codename{
+}
+.feedback_codename{
+	  font-family: Trebuchet MS;
+  font-size: 16px;
+  color: #1d8ccc;
+  text-align: left;
+}
+.feedback_comment{
+	 font-family: Trebuchet MS;
+  font-size: 13px;
+  color: #3c3c3c;
+  text-align: left;
+}
+.feedback_date{
+	  font-family: Trebuchet MS;
+  	  font-size: 12px;
+  	  color:#a1aaaa;
+}
+.feedback_delete{
+text-align:right;
+}
+
+
+#Feedback_Table{
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+
+.date_feedback{
+ background-color: #636363;
+  color: white;
+  text-align: left;
+  padding: 0px;
+  padding-top: 4px;
+    
+}
+.date_feedback_remove{
+	 background-color: #636363;
+	  color: #a1aaaa;
+	  text-align: center;
+	  padding-top: 3px;
+	    padding-bottom:11px;
+}
+.date_feedback_remove A:link {
+	color: #a1aaaa;
+  	font-size: 12px;
+}
+.feedback_collection{
+color:white;
+background-color:#3c3c3c;
+text-align:left;
+padding:12px;
+
+}
+.backgroundfeed_percollection{
+background-color:#a7a6a6;
+}
+
+
+
+/*Restrictions - App Settings*/
+.input_words{
+	   text-align: left;
+	  font-family: Trebuchet MS;
+	  font-size: 17px;
+	  margin-left: 50px;
+	  margin-top: 20px;
+	  color: #3c3c3c;
+
+}
+.subtitle_wordsettings{
+	text-align: left;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  color: #3c3c3c;
+  margin-top: 25px;
+   padding-bottom: 5px;
+
+}
+.button_addword{
+	margin-top:15px;
+	}
+.filterwords_table{
+	margin-top:40px;
+	margin-left:40px;
+	}
+a.delete_word{
+	color:#3c3c3c;
+}	
+.filter_subtitle{
+	background-color: #3c3c3c;
+	color: white;
+	text-align: center;
+	font-family:Trebuchet MS;
+	font-size:20px;
+}
+.filter_words {
+	color:#3c3c3c;
+	background-color:white;
+	font-family:Trebuchet MS;
+}
+/*Good bad Posts*/
+.postfilter_subtitle{
+	background-color: #3c3c3c;
+	color: white;
+	text-align: center;
+	font-family:Trebuchet MS;
+	font-size:20px;
+ }
+.postfilter_content{
+	color:#3c3c3c;
+	background-color:white;
+	font-family:Trebuchet MS;
+}
+.postfilter_title{
+	text-align: left;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  color: #3c3c3c;
+  margin-top:25px;
+   padding-bottom: 6px;
+     margin-left: 40px;
+}
+.name_posts {
+	  text-align: left;
+	  margin-left: 40px;
+	  font-family: Trebuchet MS;
+	  font-size: 32px;
+	  margin-top: 30px;
+	  color:#3c3c3c;
+}
+.BranchMembers{
+	margin-left: 8px;
+
+}
+/*MEDIA QUERY*/
+@media (max-width: 900px){
+
+	   div {
+         width: 100% !important;
+         padding: 0 !important;
+         margin: auto !important;
+         clear: both !important;
+         margin: 0 !important;
+         
+
+
+    }
+    .box{
+    	text-align: center;
+    }
+    .copy_update{
+    	text-align: center;
+    }
+    .update_btn{
+    	text-align: center;
+    }
+    .D22{
+    	text-align: center;
+    }
+    .D1{
+    	text-align: center;
+    }
+    .D1a{
+    	text-align: center !important;
+    	padding: 0px;
+    }
+    .dasboard_logo{
+    	text-align: center;
+    }
+    .cmd_header{
+    	text-align: center;
+
+    }
+    .menu_box{
+    	text-align: center;
+    	margin-top: 10px;
+    }
+    .menu_content{
+    	text-align: center;
+    }
+    .logo_menu{
+    	text-align: center;
+    }
+    .header_board{
+    	text-align: center;
+    	padding: 10px;
+    	
+    }
+    .ab{
+    	text-align: center;
+    }
+    .side_menu{
+    	text-align: center;
+    }
+    .side_bar{
+    	text-align: center;
+    }
+    .mediaq{
+    	text-align: center;
+    }
+    .logo_agdn{
+    	text-align: center;
+    }
+    #Board{
+    	text-align: center;
+    }
+    .button_add{
+    	text-align: center;
+    	margin-top: 19px;
+    }
+    .search{
+    	text-align: center;
+    	padding: 10px;
+    }
+}
+@media (max-width: 890px){
+	.header_board{
+		text-align: center;
+		padding: 10px;
+	}
+}

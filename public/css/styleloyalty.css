@@ -1,0 +1,266 @@
+@font-face { font-family: KGLegoHouse ; src: url('{{url()}}/../fonts/KGLegoHouse.ttf'); } 
+@font-face { font-family: Ostrich Rounded ; src: url('../fonts/ostrich-rounded.woff'); } 
+@font-face { font-family: Quicksand-Regular ; src: url('{{url()}}/../fonts/Quicksand-Regular.otf'); } 
+			
+			
+
+html,body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	height: 1000px;/*cyd*/
+}
+#Admin{
+	width: 1349px;
+
+	margin: 0;
+	padding: 0;
+	background-color: #ebebeb;
+	overflow: none;
+}
+.form{
+	
+	margin-left: 225px;
+	float: left;
+	margin-top: -178px;
+}
+.login_btn{
+	text-align: right;
+	margin-left: 203px;
+	margin-top: 8px;
+}
+#home{
+overflow: hidden;/*cyd*/
+background-image: url(../IMG/1000_backg2.jpg);
+margin: auto;
+width: 800px;
+max-height:1000px;
+}
+.copy{
+
+	padding-top: 90px;
+  font-family: Ostrich Rounded;
+  float: center;
+  color: white;
+  font-size: 70px;
+
+}
+.title_app{
+	color: white;
+	font-family:  Ostrich Rounded;
+	text-align: center;
+	
+}
+.title_app_subtitle{
+color: white;
+  font-size: 21px;
+  font-family: Trebuchet MS;
+  text-align: center;
+  padding-bottom: 55px
+
+}
+
+.p2{
+	margin-top: 4px;
+  color: white;
+  font-size: 21px;
+  font-family: Trebuchet MS;
+  text-align: center;
+}
+
+.p5{
+	color: white;
+	font-size: 23px;
+	font-family: Ostrich Rounded;
+	padding-top: 5px;
+	padding-bottom: 83px;
+	text-align: center;
+  }
+.p6{
+	text-align: center;
+	margin-right: 20px;
+}
+.Thank{
+	text-align: center;
+	margin-left: 151px;
+}
+.p7{
+	color: #ffcc00;
+	font-size: 23px;
+	font-family:  Aracne Condensed;
+}
+
+#Terms{
+
+background-image: url(../IMG/Terms.png);
+	margin: auto;
+	width: 675px;
+	height:1150px;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 20;
+	display: none;
+}
+
+.yellow-bg{
+	background-image: url(../IMG/yellowbg.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	cursor: pointer;
+	max-width: 800px;
+	display: none;
+	height: 1740px;
+}
+
+
+
+.t1{
+	margin-top: 20px;
+}
+.t2{
+
+	color: #ffcc00;
+	font-size: 40px;
+	font-family:  Aracne Condensed;
+}
+.t3{
+	margin-top: 10px;
+	color: white;
+	font-size: 14px;
+	font-family:  KGLegoHouse;
+	clear: both;
+	text-align: center;
+}
+
+.t4{
+	color: white;
+	font-size: 14px;
+	font-family:  KGLegoHouse;
+
+}
+.t5{
+	text-align: center;
+	clear: both;
+
+
+}
+
+.t6{
+	color: white;
+	font-size: 12px;
+	font-family:  KGLegoHouse;
+
+}
+.t7{
+	color: white;
+	font-size: 12px;
+	font-family:  KGLegoHouse;
+
+}
+.t8{
+	color: white;
+	font-size: 12px;
+	font-family:  KGLegoHouse;
+
+}
+.t9{
+	color: white;
+	font-size: 12px;
+	font-family:  KGLegoHouse;
+
+}
+
+.t10{
+	color: white;
+	font-size: 12px;
+	font-family:  KGLegoHouse;
+	}
+
+.t11{
+	clear: both;
+	text-align: center;
+	margin:0px;
+}
+.t12{
+	color: white;
+	font-size: 25px;
+	font-family:  Aracne Condensed;
+	
+	margin-left: 15px;
+}
+
+.join_me_in{
+	text-align: center;
+	margin-top: 60px;
+	color: #ffcc00;
+}
+.list-group-item{
+	color: black !important;
+}
+.userlist{
+	text-align: center;
+	color: black;
+}
+
+.termsC{
+	text-align: center;
+	clear: both;
+	padding-top: 15px;
+	cursor: pointer;
+	font-family: Ostrich Rounded;
+	margin-top: 95px;
+}
+.termsC1{
+	text-align: center;
+	clear: both;
+	padding-top: 15px;
+	font-family: Ostrich Rounded;
+	margin-top: 95px;
+	
+}
+.join_button{
+	text-align: center;
+	clear: both;
+	cursor: pointer;
+	margin-top: -32px
+}
+.join_bot{
+	text-align: center;
+	clear: both;
+	cursor: pointer;
+	margin-top: -32px
+}
+
+/*---------Profile---------*/
+
+.header{
+	background-color: #969494;
+	width: 800px;
+}
+
+/*cyd media query*/
+@media (max-width: 800px) {
+	#home,
+	.p5,
+	.notYetJoin,
+	.termsC1,
+	div,p,h1,h2,h3,h4,h5,hr{
+  	  	width: 100%;
+		margin:  0;
+		padding: 0;
+	}
+	
+	.title_app_subtitle{
+		padding-bottom: 30px;
+	}
+}

@@ -1,0 +1,24 @@
+
+.maintitle_privacy{
+	padding-top: 15px;
+  	padding-bottom: 15px;
+  	text-align: center;
+}
+.title_privacy{
+	padding-top: 15px;
+  	padding-bottom: 5px;
+
+}
+.bullet_indent{
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.bottomspace{
+	padding-bottom: 100px;
+}
+.bottom_desc{
+	font-size: 10px;
+	color: #a1aaaa;
+	padding-left:10px;
+	padding-bottom: 10px;
+}

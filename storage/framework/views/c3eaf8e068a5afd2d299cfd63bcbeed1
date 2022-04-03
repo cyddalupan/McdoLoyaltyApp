@@ -1,0 +1,39 @@
+<?php $__env->startSection('title'); ?>
+   Suggestions
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('page htag'); ?>
+   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Feedback
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('submenu'); ?>
+	<ul class="nav nav-pills">
+		<li role="presentation"><a href="<?php echo e(url()); ?>/suggestion">Feeds</a></li>
+		<li role="presentation" class="active"><a href="#">Trash</a></li>
+	</ul>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<style type="text/css">
+		a{color:rgb(51, 122, 183);}
+	</style>
+
+	<div class="row" style="text-align:left; color:black; margin-left:30px;">
+		<?php foreach($deleted_suggestions as $deleted_suggestion): ?>
+			
+			<div class="col-md-5 suggestion_feed one-edge-shadow">	
+			<div class="col-md-12 feedback_codename"><p><?php echo e($deleted_suggestion->code_name); ?></p><hr></div>
+			
+			
+			<div class="col-md-12 feedback_comment"><p><?php echo e($deleted_suggestion->description); ?></p></div>		
+			<br>
+			<div class="col-md-12 feedback_date"><p><?php echo e($deleted_suggestion->created_at); ?></p></div>
+			<br>
+			
+			
+			</div>
+		<?php endforeach; ?>
+
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('DashPlate', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

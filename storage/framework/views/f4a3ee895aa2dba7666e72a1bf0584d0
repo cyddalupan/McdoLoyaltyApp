@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Change Image
+		</title>
+		<link rel="stylesheet" href="<?php echo e(url()); ?>/public/css/bootstrap.css">
+		<style type="text/css">
+			body{
+				background: #ecebeb;
+			}
+			
+		</style>
+		<script src="<?php echo e(url()); ?>/public/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#post_image_upload').click(function(){
+					$( '.change_button' ).val('Upadate');
+					$( '.change_button' ).removeClass( "btn-info" ).addClass( "btn-warning" );
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="changeimage">
+		<?php foreach($errors->all() as $error): ?>
+            <p style="color:red;">*<?php echo e(isset($error) ? $error : ''); ?></p>
+        <?php endforeach; ?>
+		<img src="<?php echo e(url()); ?>/public/event_img/<?php echo e($event->img); ?>">
+
+		<form action="<?php echo e(url()); ?>/events/change_image_submit" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="eventid" value="<?php echo e($event->id); ?>">
+			<div class="info">
+				Select New Image to upload:
+			</div>
+			<div class="select_img">
+	            <input type="file" name="photo" id="post_image_upload" value="">
+	            <p class="help-block note_event">Select File to upload. Photo must be 622px by 314px</p>
+			</div>
+			<input class="btn btn-info" type="submit" class="change_button" value="Change Image">
+		</form>
+	</div>
+	</body>
+</html>
